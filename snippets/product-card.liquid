@@ -17,12 +17,9 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
 <div class="card-wrapper">
+  <script>console.log({{ product_card_product | json }})</script>
   <div class="card-information">
     <div class="card-information__wrapper">
-      {%- if show_vendor -%}
-        <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-        <div class="caption-with-letter-spacing light">{{ product_card_product.vendor }}</div>
-      {%- endif -%}
 
       {%- if product_card_product.featured_media -%}
         <h3 class="card-information__text h5">
@@ -30,6 +27,11 @@
             {{ product_card_product.title | escape }}
           </a>
         </h3>
+      {%- endif -%}
+
+      {%- if product_card_product.vendor -%}
+        <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+        <div class="card-information__vendor caption-with-letter-spacing">{{ product_card_product.vendor }}</div>
       {%- endif -%}
 
       {% comment %} TODO: metafield {% endcomment %}
