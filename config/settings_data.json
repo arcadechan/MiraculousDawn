@@ -11,6 +11,8 @@
       "colors_background_2": "#32bdb6",
       "type_header_font": "nunito_n7",
       "type_body_font": "oswald_n4",
+      "social_facebook_link": "https://www.facebook.com/miraculouseducation",
+      "social_instagram_link": "https://www.instagram.com/miraculouseducation/",
       "sections": {
         "announcement-bar": {
           "type": "announcement-bar",
@@ -24,6 +26,26 @@
           },
           "block_order": [
             "announcement-bar-0"
+          ]
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {
+            "newsletter_enable": true,
+            "newsletter_heading": "Subscribe",
+            "newsletter_subtext": "Subscribe to our newsletter so that you can be the first to know about new offers and promotions.",
+            "show_social": true
+          },
+          "blocks": {
+            "menu": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Useful"
+              }
+            }
+          },
+          "block_order": [
+            "menu"
           ]
         }
       }
