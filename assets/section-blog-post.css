@@ -173,3 +173,41 @@
     margin: 5rem 0 8rem;
   }
 }
+
+/* CUSTOM CSS */
+.article-template .article-template__hero-container {
+  margin: 0 auto;
+  max-width: 1920px;
+  max-height: 33vh;
+  height: 33vw;
+  min-height: 15vh;
+}
+
+.article-template .article-template__hero-container .article-template__hero-adapt {
+  height: 100%;
+}
+
+.article-template__title {
+  color: #4f4788;
+  font-family: 'Nunito', sans-serif;
+}
+
+span time {
+  font-size: 1.25rem;
+}
+
+span time, 
+.article-template__content,
+.article-template__link {
+  font-family: 'Roboto', sans-serif;
+  color: #484848;
+}
+
+.article-template__content h1,
+.article-template__content h2,
+.article-template__content h3,
+.article-template__content h4,
+.article-template__content h5,
+.article-template__content h6 {
+  color: #4f4788;
+}
