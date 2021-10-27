@@ -340,3 +340,19 @@ footer.footer .footer__content-bottom .footer__copyright {
         margin-right: 1rem;
     }
 }
+
+/* START BLOG STYLES STYLES */
+.main-blog .title--primary {
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.blog-articles {
+    margin: 0 2rem;
+}
+
+@media screen and (min-width: 99px) {
+    .blog-articles {
+        margin: 0;
+    }
+}
