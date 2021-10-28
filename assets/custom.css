@@ -26,6 +26,10 @@
 }
 
 /* Navigation Bar */
+.header-wrapper {
+    box-shadow: 0px 2px 10px rgba(0,0,0,.25);
+}
+
 .header * {
     color: #484848;
     font-family: 'Nunito', sans-serif;
@@ -272,7 +276,6 @@ header-drawer .menu-drawer-container summary.header__icon--menu span svg path{
 .grid .grid__item .card-wrapper .card-information .card-information__wrapper .card-information__text {
     color: #4f4788;
     font-family: 'Nunito', sans-serif;
-    font-size: 1.75rem;
     font-weight: bolder;
     text-decoration: none;
 }
@@ -280,7 +283,16 @@ header-drawer .menu-drawer-container summary.header__icon--menu span svg path{
 .grid .grid__item .card-wrapper .card-information .card-information__wrapper .card-information__vendor {
     color: #484848;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 990px){
+    .grid .grid__item .card-wrapper .card-information .card-information__wrapper .card-information__text {
+        font-size: calc(var(--font-heading-scale) * 1.75rem);
+    }
+
+    .grid .grid__item .card-wrapper .card-information .card-information__wrapper .card-information__vendor {
+
+    }
 }
 
 .grid .grid__item .card-wrapper .card-information .card-information__wrapper .price .price__regular,
@@ -487,11 +499,11 @@ footer.footer .footer__content-bottom .footer__copyright {
     text-transform: uppercase;
 }
 
-/* .grid .grid__item .card-wrapper:hover {
-    transform: translateY(-2rem);
-    transition: transform .25s ease-in-out;
+.pagination-wrapper {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
 }
 
-.grid .grid__item .card-wrapper .card-information .card-information__wrapper .card-information__text {
-    
-} */
+.pagination-wrapper .pagination__item {
+    color: #4f4788 !important;
+}
