@@ -60,7 +60,7 @@ nav.header__inline-menu ul.list-menu li:hover summary.header__menu-item span {
 ul.header__submenu {
     border-radius: 5px;
     border: none;
-    box-shadow: 2px 2px 10px rgba(0,0,0,.25)
+    box-shadow: 2px 2px 10px rgba(0,0,0,.25);
 }
 
 header-drawer {
@@ -108,6 +108,11 @@ header-drawer .menu-drawer-container summary.header__icon--menu span svg path{
 .color-background-2, 
 .color-background-2 * {
     color: #fff !important;
+}
+
+.banner {
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .banner .banner__content {
@@ -159,6 +164,91 @@ header-drawer .menu-drawer-container summary.header__icon--menu span svg path{
     }
 }
 
+/* Collection Cards (Shop by Categories) */
+.collection-list-wrapper .title-wrapper-with-link .collection-list-title {
+    margin: 0 auto;
+}
+
+.collection-list {
+    justify-content: center;
+}
+
+.collection-list .collection-list__item .card--media {
+    border: none;
+}
+
+.collection-list__item .card--light-border:hover {
+    border: none !important;
+}
+
+.collection-list .collection-list__item div[class^='card'] {
+    background-color: #ffffff;
+}
+
+.collection-list .collection-list__item div[class^='card'] .card__text {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+    margin-top: 3rem;
+}
+
+.collection-list .collection-list__item div[class^='card'] .card__text h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 2.25rem;
+}
+
+.collection-list .collection-list__item:nth-child(4n-1)  div[class^='card'] .card__text h3 {
+    color: #32bdb6;
+}
+
+.collection-list .collection-list__item:nth-child(4n-2)  div[class^='card'] .card__text h3 {
+    color: #EF6543;
+}
+
+.collection-list .collection-list__item:nth-child(4n-3)  div[class^='card'] .card__text h3 {
+    color: #4F4788;
+}
+
+.collection-list .collection-list__item:nth-child(4n-4)  div[class^='card'] .card__text h3 {
+    color: #386fa3;
+}
+
+.collection-list .collection-list__item.grid__item {
+    max-width: 300px;
+}
+
+.collection-list .collection-list__item.grid__item .card:hover .media {
+    transition: none;
+    transform: none;
+}
+
+.collection-list .collection-list__item.grid__item .card:hover {
+    transition: none;
+    text-decoration: underline;
+}
+
+.collection-list .collection-list__item.grid__item .media {
+    background-color: #ffffff;
+}
+
+.collection-list .collection-list__item.grid__item .media img {
+    width: auto;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (min-width: 990px){
+    .collection-list .collection-list__item.grid__item {
+        width: 25%;
+    }
+
+    /* .collection-list-section {
+        margin: 10rem auto 15rem;
+    } */
+}
+
 /* Product Card */
 .grid .grid__item {
     padding-left: 3rem;
@@ -206,6 +296,7 @@ header-drawer .menu-drawer-container summary.header__icon--menu span svg path{
     border-radius: 8px;
 }
 
+.grid .grid__item .card-wrapper .card.card--product.card--outline .card__inner,
 .grid .grid__item .card-wrapper .card.card--product.card--outline .card__inner .media {
     background-color: #fff;
 }
@@ -351,8 +442,56 @@ footer.footer .footer__content-bottom .footer__copyright {
     margin: 0 2rem;
 }
 
-@media screen and (min-width: 99px) {
+@media screen and (min-width: 990px) {
     .blog-articles {
         margin: 0;
     }
 }
+
+/* General Section spacing for desktop */
+@media screen and (min-width: 990px) {
+    .shopify-section.spaced-section {
+        margin: 10rem 0 10rem;
+    }
+}
+
+/* Multi-column grid item, card like treatment */
+.multicolumn-list .multicolumn-card {
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    padding: 1.15rem;
+    /* transform: translateY(0rem);
+    transition: transform .25s ease-in-out; */
+    /* cursor: pointer; */
+}
+
+.multicolumn-list .multicolumn-card:hover {
+    /* transform: translateY(-2rem);
+    transition: transform .25s ease-in-out; */
+}
+
+.multicolumn-list .multicolumn-card .multicolumn-card__image-wrapper .media {
+    border-radius: 8px;
+}
+
+.multicolumn-list .multicolumn-card .multicolumn-card__info {
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.multicolumn-list .multicolumn-card .multicolumn-card__info .rte * {
+    color: #4f4788;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    /* text-decoration: none; */
+    text-transform: uppercase;
+}
+
+/* .grid .grid__item .card-wrapper:hover {
+    transform: translateY(-2rem);
+    transition: transform .25s ease-in-out;
+}
+
+.grid .grid__item .card-wrapper .card-information .card-information__wrapper .card-information__text {
+    
+} */
