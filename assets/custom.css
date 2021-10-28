@@ -450,7 +450,7 @@ footer.footer .footer__content-bottom .footer__copyright {
 
 /* General Section spacing for desktop */
 @media screen and (min-width: 990px) {
-    .shopify-section.spaced-section {
+    .shopify-section.spaced-section:not(section[id$="image_banner"]) {
         margin: 10rem 0 10rem;
     }
 }
