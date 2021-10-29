@@ -17,7 +17,9 @@
   <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
-
+<script>
+    console.log({{ product | json }});
+</script>
 <section class="page-width">
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
@@ -65,6 +67,17 @@
           {% render 'icon-3d-model' %}
           {{ 'products.product.xr_button' | t }}
         </button>
+      {%- endif -%}
+      {%- assign producttype = product.type | downcase -%}
+      {%- if producttype == 'book' -%}
+        <div class='book-reading-level-link desktop-reading-level'>
+          <a href="/blogs/main/what-are-reading-levels" style="text-decoration:underline;" title="Click here to read our guide: An Introduction to Reading Levels">
+            <p>
+              Need help <b>determining your child's reading level?</b><br>
+              <span class='click-here-text'>Click here</span> to read our guide: <b>"An Introduction to Reading Levels"</b>
+            </p>
+          </a>
+        </div>
       {%- endif -%}
     </div>
     <div class="product__info-wrapper grid__item">
@@ -365,6 +378,23 @@
             {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
+        <div id='product-tags'>
+          {%- for tag in product.tags -%}
+            <div class='product-tag'>
+              <span>{{ tag }}</span>
+            </div>
+          {%- endfor -%}
+        </div>
+        {%- if producttype == 'book' -%}
+        <div class='book-reading-level-link mobile-reading-level'>
+          <a href="/blogs/main/what-are-reading-levels" style="text-decoration:underline;" title="Click here to read our guide: An Introduction to Reading Levels">
+            <p>
+              Need help <b>determining your child's reading level?</b><br>
+              <span class='click-here-text'>Click here</span> to read our guide: <b>"An Introduction to Reading Levels"</b>
+            </p>
+          </a>
+        </div>
+      {%- endif -%}
       </div>
     </div>
   </div>

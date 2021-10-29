@@ -507,3 +507,8 @@ footer.footer .footer__content-bottom .footer__copyright {
 .pagination-wrapper .pagination__item {
     color: #4f4788 !important;
 }
+
+/* Cart Preview Drawer */
+.cart-notification-wrapper .cart-notification__links {
+    font-family: 'Nunito', sans-serif;
+}
