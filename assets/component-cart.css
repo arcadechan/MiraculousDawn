@@ -386,14 +386,14 @@ cart-items {
   .cart__contents {
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 5px 5px 10px rgb(0,0,,15);
+    box-shadow: 5px 5px 10px rgb(0,0,0,.15);
     padding: 2rem;
   }
 
   .cart__footer .cart__blocks {
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 5px 5px 10px rgb(0,0,,15);
+    box-shadow: 5px 5px 10px rgb(0,0,0,.15);
     padding: 2rem;
   }
   

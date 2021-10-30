@@ -317,14 +317,14 @@
     "log_out": "Log out",
     "login_page": {
       "cancel": "Cancel",
-      "create_account": "Create account",
+      "create_account": "Don't have an account? Sign up here.",
       "email": "Email",
       "forgot_password": "Forgot your password?",
       "guest_continue": "Continue",
       "guest_title": "Continue as a guest",
       "password": "Password",
       "title": "Login",
-      "sign_in": "Sign in",
+      "sign_in": "Log in",
       "submit": "Submit"
     },
     "order": {
