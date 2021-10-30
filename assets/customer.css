@@ -752,3 +752,62 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
 }
+
+/* CUSTOM CSS */
+.customer:not(.account):not(.order),
+.customer.login {
+  padding: 2rem;
+}
+
+h1 {
+  color: #4F4788;
+}
+
+h1, p {
+  font-family: 'Nunito', sans-serif;
+}
+
+#create_customer .field input,
+#customer_login .field input,
+form[action='/account/recover'] .field input {
+  border: 2px solid #484848;
+  border-radius: 5px;
+  box-shadow: none !important;
+}
+
+#create_customer a,
+#create_customer button,
+#create_customer .field input,
+#create_customer .field label,
+#customer_login a,
+#customer_login button,
+#customer_login .field input,
+#customer_login .field label,
+form[action='/account/recover'] a,
+form[action='/account/recover'] button,
+form[action='/account/recover'] .field input,
+form[action='/account/recover'] .field label {
+  font-family: 'Roboto', sans-serif;
+}
+
+#create_customer button,
+#customer_login button,
+form[action='/account/recover'] button {
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color: #4f4788;
+}
+
+@media screen and (min-width: 990px){
+  #MainContent {
+    background-color: #fafafa;
+  }
+
+  .customer.login,
+  .customer.register {
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgb(0,0,0,.15);
+    border-radius: 10px;
+  }
+}
