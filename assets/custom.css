@@ -74,6 +74,11 @@ ul.header__submenu {
     box-shadow: 2px 2px 10px rgba(0,0,0,.25);
 }
 
+/* STICKY HEADER FIX */
+.shopify-section-header-hidden {
+    transform: translateY(0%) !important;
+  }
+
 header-drawer {
     margin-left: 0 !important;
 }
@@ -130,8 +135,13 @@ header-drawer .menu-drawer-container summary.header__icon--menu span svg path{
     margin-top: -50px;
 }
 
+.banner:after {
+    background: linear-gradient(180deg, rgba(50,189,182,0) 0%, rgba(50,189,182,1) 21%, rgba(50,189,182,1) 100%) !important;
+}
+
 .banner .banner__content .banner__box {
     height: 100%;
+    background-color: transparent;
     background: rgb(50,189,182);
     background: linear-gradient(180deg, rgba(50,189,182,0) 0%, rgba(50,189,182,1) 21%, rgba(50,189,182,1) 100%);
     display: flex;
@@ -157,9 +167,16 @@ header-drawer .menu-drawer-container summary.header__icon--menu span svg path{
         margin-right: 0;
         margin-top: 0;
     }
+
+    .banner:after {
+        background: linear-gradient(90deg, rgba(50,189,182,0) 0%, rgba(50,189,182,0.8453765772870663) 35%, rgba(50,189,182,1) 100%) !important;
+        width: 50% !important;
+        right: 0 !important;
+    }
     
     .banner .banner__content .banner__box {
-        background: linear-gradient(90deg, rgba(50,189,182,0) 0%, rgba(50,189,182,0.8453765772870663) 35%, rgba(50,189,182,1) 100%);
+        background: transparent;
+        /* background: linear-gradient(90deg, rgba(50,189,182,0) 0%, rgba(50,189,182,0.8453765772870663) 35%, rgba(50,189,182,1) 100%); */
         padding: 5rem 5rem 5rem 10rem;
     }
     
