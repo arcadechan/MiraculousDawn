@@ -1,5 +1,92 @@
 {
-  "current": "Default",
+  "current": {
+    "colors_solid_button_labels": "#FFFFFF",
+    "colors_accent_1": "#F2B51F",
+    "colors_accent_2": "#334FB4",
+    "colors_text": "#484848",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#FFFFFF",
+    "colors_background_2": "#32bdb6",
+    "type_header_font": "nunito_n7",
+    "type_body_font": "oswald_n4",
+    "social_facebook_link": "https:\/\/www.facebook.com\/miraculouseducation",
+    "social_instagram_link": "https:\/\/www.instagram.com\/miraculouseducation\/",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "FREE SHIPPING on orders over $49 in the U.S.",
+              "color_scheme": "background-2",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "menu": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Useful",
+              "menu": "footer"
+            }
+          },
+          "9f094dc6-6341-4e7d-9fe4-b69a387eb2bb": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Shop",
+              "menu": "footer-shop-menu"
+            }
+          },
+          "47359998-3f32-48b6-92a1-7b2167430023": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Account",
+              "menu": "footer-account-menu"
+            }
+          }
+        },
+        "block_order": [
+          "menu",
+          "9f094dc6-6341-4e7d-9fe4-b69a387eb2bb",
+          "47359998-3f32-48b6-92a1-7b2167430023"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe",
+          "newsletter_subtext": "Subscribe to our newsletter so that you can be the first to know about new offers and promotions.",
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "color_scheme": "background-1",
+          "logo_width": 100,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": true
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
     "Default": {
       "colors_solid_button_labels": "#FFFFFF",
@@ -11,8 +98,8 @@
       "colors_background_2": "#32bdb6",
       "type_header_font": "nunito_n7",
       "type_body_font": "oswald_n4",
-      "social_facebook_link": "https://www.facebook.com/miraculouseducation",
-      "social_instagram_link": "https://www.instagram.com/miraculouseducation/",
+      "social_facebook_link": "https:\/\/www.facebook.com\/miraculouseducation",
+      "social_instagram_link": "https:\/\/www.instagram.com\/miraculouseducation\/",
       "sections": {
         "announcement-bar": {
           "type": "announcement-bar",
@@ -26,16 +113,12 @@
           },
           "block_order": [
             "announcement-bar-0"
-          ]
+          ],
+          "settings": {
+          }
         },
         "footer": {
           "type": "footer",
-          "settings": {
-            "newsletter_enable": true,
-            "newsletter_heading": "Subscribe",
-            "newsletter_subtext": "Subscribe to our newsletter so that you can be the first to know about new offers and promotions.",
-            "show_social": true
-          },
           "blocks": {
             "menu": {
               "type": "link_list",
@@ -46,7 +129,13 @@
           },
           "block_order": [
             "menu"
-          ]
+          ],
+          "settings": {
+            "newsletter_enable": true,
+            "newsletter_heading": "Subscribe",
+            "newsletter_subtext": "Subscribe to our newsletter so that you can be the first to know about new offers and promotions.",
+            "show_social": true
+          }
         }
       }
     },
@@ -63,21 +152,25 @@
       "sections": {
         "footer": {
           "type": "footer",
-          "settings": {
-            "color_scheme": "accent-1"
-          },
           "blocks": {
             "menu": {
-              "type": "link_list"
+              "type": "link_list",
+              "settings": {
+              }
             },
             "text": {
-              "type": "text"
+              "type": "text",
+              "settings": {
+              }
             }
           },
           "block_order": [
             "menu",
             "text"
-          ]
+          ],
+          "settings": {
+            "color_scheme": "accent-1"
+          }
         }
       }
     }
