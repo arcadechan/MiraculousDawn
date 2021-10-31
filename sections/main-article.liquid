@@ -14,7 +14,7 @@
             <div class="article-template__hero-{{ block.settings.image_height }} media"
               itemprop="image"
               {% if block.settings.image_height == 'adapt' and article.image %}
-                style="padding-bottom: {{ image_height }}%;height: {{image_height}}%;max-height: 220px;"
+                style="height: 100%; max-height: 500px;"
               {% endif %}
             >
               <img
