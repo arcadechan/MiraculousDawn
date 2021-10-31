@@ -857,8 +857,15 @@ a.product__text {
 }
 
 .product-form__quantity .quantity {
-  border: .2rem solid #4f4788;
-  border-radius: 10px;
+  height: 3.5rem;
+  border: none;
+}
+
+.product-form__quantity .quantity .quantity__button {
+  background-color: #F2B51F;
+  color: #4f4788;
+  border-radius: 5px;
+  width: calc(5rem / var(--font-body-scale));
 }
 
 .product-form__quantity .quantity button .icon {
@@ -874,14 +881,22 @@ a.product__text {
   font-family: 'Nunito', sans-serif;
 }
 
-.product-form .product-form__submit {
+.product-form .product-form__submit,
+.shopify-payment-button__button {
   background-color: #F2B51F;
   font-weight: 800;
   border: 0;
   box-shadow: none;
 }
 
-.product-form .product-form__submit:hover {
+.shopify-payment-button__button {
+  border-radius: 8px;
+  color: #4f4788;
+  text-transform: uppercase;
+}
+
+.product-form .product-form__submit:hover,
+.shopify-payment-button__button:hover {
   box-shadow: 0 0 0 0.1rem rgba(0,0,0,0.15);
 }
 
@@ -947,7 +962,7 @@ a.product__text {
   white-space: nowrap;
 }
 
-.book-reading-level-link {
+.book-reading-level-link * {
   font-family: 'Nunito', sans-serif;
   color: #4f4788;
 }
