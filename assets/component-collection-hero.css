@@ -92,3 +92,10 @@
     min-height: 20rem;
   }
 }
+
+/* Custom CSS */
+.collection-hero__title {
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  color: #4f4788;
+}

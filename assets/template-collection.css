@@ -55,3 +55,105 @@
   margin-top: 10rem;
   margin-bottom: 15rem;
 }
+
+/* Custom CSS */
+@media screen and (max-width: 989px) {
+  #product-grid {
+    margin-left: -3.5rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #product-grid {
+    margin-left: -3rem;
+  }
+}
+
+#main-collection-filters .facets-container {
+  border-bottom: 2px solid #cfcfcf;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+}
+
+#main-collection-filters .facets-container .product-count {
+  color: #0abbb2; /* global teal is #32bdb6; this version is slightly darker for light backgrounds and text*/
+}
+
+#main-collection-filters .facets-container .mobile-facets__open svg.icon {
+  display: none;
+}
+
+.active-facets {
+  margin-top: 1rem !important;
+}
+
+.active-facets .active-facets__button .active-facets__button-inner.button {
+  background: #32bdb6;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  box-shadow: 1px 2px 3px rgb(0 0 0 / 20%);
+}
+
+.active-facets .active-facets__button .active-facets__button-inner.button svg.icon-close-small path {
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+#main-collection-filters .facets-container .mobile-facets__wrapper summary.mobile-facets__open-wrapper {
+  background-color: #F2B51F;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+#main-collection-filters .facets-container .mobile-facets__wrapper summary.mobile-facets__open-wrapper .mobile-facets__open-label {
+  margin: .25rem 1rem;
+  color: #4f4788;
+  text-decoration: none;
+}
+
+#main-collection-filters .facets-container .mobile-facets__wrapper summary.mobile-facets__open-wrapper .icon.icon-close {
+  stroke: #fff;
+}
+
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__header,
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__main,
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__footer,
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__main .mobile-facets__submenu,
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__main .mobile-facets__submenu .mobile-facets__list,
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__main .mobile-facets__submenu .mobile-facets__list .mobile-facets__item,
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__main .mobile-facets__submenu .mobile-facets__list .mobile-facets__item label,
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__main .mobile-facets__submenu .mobile-facets__list .mobile-facets__item label .facet-checkbox-svg {
+  background-color: #4f4788;
+}
+
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__main .mobile-facets__submenu .icon.icon-checkmark {
+  background: transparent;
+}
+
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner * {
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__header *,
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__main,
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__footer, 
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__main .mobile-facets__submenu * {
+  color: #fff;
+}
+
+.field__input {
+  border: 1px solid #fff;
+}
+
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__sort select * {
+  color: #000;
+}
+
+.facets-container #FacetFiltersFormMobile .mobile-facets__inner .mobile-facets__footer button {
+  color: #4f4788;
+  font-weight: 800;
+}

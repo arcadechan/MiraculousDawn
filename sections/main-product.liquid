@@ -17,7 +17,9 @@
   <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
-
+<script>
+    console.log({{ product | json }});
+</script>
 <section class="page-width">
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
@@ -66,6 +68,17 @@
           {{ 'products.product.xr_button' | t }}
         </button>
       {%- endif -%}
+      {%- assign producttype = product.type | downcase -%}
+      {%- if producttype == 'book' -%}
+        <div class='book-reading-level-link desktop-reading-level'>
+          <a href="/blogs/main/what-are-reading-levels" style="text-decoration:underline;" title="Click here to read our guide: An Introduction to Reading Levels">
+            <p>
+              Need help <b>determining your child's reading level?</b><br>
+              <span class='click-here-text'>Click here</span> to read our guide: <b>"An Introduction to Reading Levels"</b>
+            </p>
+          </a>
+        </div>
+      {%- endif -%}
     </div>
     <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
@@ -86,22 +99,6 @@
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-            </div>
-            {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-              <div class="product__tax caption rte">
-                {%- if shop.taxes_included -%}
-                  {{ 'products.product.include_taxes' | t }}
-                {%- endif -%}
-                {%- if shop.shipping_policy.body != blank -%}
-                  {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                {%- endif -%}
-              </div>
-            {%- endif -%}
-            <div {{ block.shopify_attributes }}>
-              {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
-                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                {{ form | payment_terms }}
-              {%- endform -%}
             </div>
           {%- when 'description' -%}
             {%- if product.description != blank -%}
@@ -335,7 +332,38 @@
                 </template>
               </pickup-availability>
             </div>
-
+            {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+              <div class="product__tax caption rte">
+                {%- if shop.taxes_included -%}
+                  {{ 'products.product.include_taxes' | t }}
+                {%- endif -%}
+                {%- if shop.shipping_policy.body != blank -%}
+                  <div id='shipping-policy-container'>
+                    <div class='shipping-truck-icon'>
+                      <svg aria-hidden='true' focusable='false' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 24.5">
+                        <g id="fast" transform="translate(0 -7)">
+                          <path id="Path_116" data-name="Path 116" d="M8.375,19.75h-3.5a.875.875,0,0,1,0-1.75h3.5a.875.875,0,0,1,0,1.75Z" transform="translate(3 8.25)" fill="currentColor"/>
+                          <path id="Path_117" data-name="Path 117" d="M29.688,25.75H27.5a.875.875,0,0,1,0-1.75h1.461l1.179-6.286A6.124,6.124,0,0,0,24,11.75H18.255L15.471,24H20.5a.875.875,0,1,1,0,1.75H14.375a.875.875,0,0,1-.854-1.068l3.181-14A.874.874,0,0,1,17.557,10H24a7.885,7.885,0,0,1,7.875,7.875l-1.328,7.161A.873.873,0,0,1,29.688,25.75Z" transform="translate(10.125 2.25)" fill="currentColor"/>
+                          <path id="Path_118" data-name="Path 118" d="M21.375,24.75a4.375,4.375,0,1,1,4.375-4.375A4.38,4.38,0,0,1,21.375,24.75Zm0-7A2.625,2.625,0,1,0,24,20.375,2.628,2.628,0,0,0,21.375,17.75Z" transform="translate(12.75 6.75)" fill="currentColor"/>
+                          <path id="Path_119" data-name="Path 119" d="M10.375,24.75a4.375,4.375,0,1,1,4.375-4.375A4.38,4.38,0,0,1,10.375,24.75Zm0-7A2.625,2.625,0,1,0,13,20.375,2.628,2.628,0,0,0,10.375,17.75Z" transform="translate(4.5 6.75)" fill="currentColor"/>
+                          <path id="Path_120" data-name="Path 120" d="M9.875,10.75h-7a.875.875,0,0,1,0-1.75h7a.875.875,0,0,1,0,1.75Z" transform="translate(1.5 1.5)" fill="currentColor"/>
+                          <path id="Path_121" data-name="Path 121" d="M10.625,13.75H1.875a.875.875,0,0,1,0-1.75h8.75a.875.875,0,0,1,0,1.75Z" transform="translate(0.75 3.75)" fill="currentColor"/>
+                          <path id="Path_122" data-name="Path 122" d="M11.375,16.75H.875a.875.875,0,0,1,0-1.75h10.5a.875.875,0,0,1,0,1.75Z" transform="translate(0 6)" fill="currentColor"/>
+                          <path id="Path_123" data-name="Path 123" d="M21.5,28H15.375a.875.875,0,0,1,0-1.75H20.8l3.976-17.5H4.875a.875.875,0,0,1,0-1.75h21a.875.875,0,0,1,.854,1.068l-4.375,19.25A.876.876,0,0,1,21.5,28Z" transform="translate(3)" fill="currentColor"/>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class='shipping-policy-text'>{{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}</div>
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            <div {{ block.shopify_attributes }}>
+              {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                {{ form | payment_terms }}
+              {%- endform -%}
+            </div>
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
           {%- when 'rating' -%}
             {%- if product.metafields.reviews.rating.value != blank -%}
@@ -361,6 +389,23 @@
             {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
+        <div id='product-tags'>
+          {%- for tag in product.tags -%}
+            <div class='product-tag'>
+              <span>{{ tag }}</span>
+            </div>
+          {%- endfor -%}
+        </div>
+        {%- if producttype == 'book' -%}
+        <div class='book-reading-level-link mobile-reading-level'>
+          <a href="/blogs/main/what-are-reading-levels" style="text-decoration:underline;" title="Click here to read our guide: An Introduction to Reading Levels">
+            <p>
+              Need help <b>determining your child's reading level?</b><br>
+              <span class='click-here-text'>Click here</span> to read our guide: <b>"An Introduction to Reading Levels"</b>
+            </p>
+          </a>
+        </div>
+      {%- endif -%}
       </div>
     </div>
   </div>
