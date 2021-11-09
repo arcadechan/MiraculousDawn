@@ -386,6 +386,23 @@
             {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
+
+        {%- if producttype == 'book' -%}
+          <!-- Book Custom Metadata Container -->
+              <h2 id='book-metafields-header'>Product Details</h2>
+              <table id='book-metafields-table'>
+                <tbody>
+                  {%- for field in product.metafields.product_details -%}
+                    {% assign metafield_data = field | join: ',' | split: ',' %}
+                    <tr>
+                      <td class='book-metafield-name'>{{ metafield_data | first | replace: '_', ' ' | upcase }}</td>
+                      <td class='book-metafield-value'>{{ metafield_data | last }}</td>
+                    </tr>
+                  {%- endfor -%}
+                </tbody>
+              </table>
+        {%- endif -%}
+
         <div id='product-tags'>
           {%- for tag in product.tags -%}
             <div class='product-tag'>
@@ -394,15 +411,15 @@
           {%- endfor -%}
         </div>
         {%- if producttype == 'book' -%}
-        <div class='book-reading-level-link mobile-reading-level'>
-          <a href="/blogs/main/what-are-reading-levels" style="text-decoration:underline;" title="Click here to read our guide: An Introduction to Reading Levels">
-            <p>
-              Need help <b>determining your child's reading level?</b><br>
-              <span class='click-here-text'>Click here</span> to read our guide: <b>"An Introduction to Reading Levels"</b>
-            </p>
-          </a>
-        </div>
-      {%- endif -%}
+          <div class='book-reading-level-link mobile-reading-level'>
+            <a href="/blogs/main/what-are-reading-levels" style="text-decoration:underline;" title="Click here to read our guide: An Introduction to Reading Levels">
+              <p>
+                Need help <b>determining your child's reading level?</b><br>
+                <span class='click-here-text'>Click here</span> to read our guide: <b>"An Introduction to Reading Levels"</b>
+              </p>
+            </a>
+          </div>
+        {%- endif -%}
       </div>
     </div>
   </div>
