@@ -388,8 +388,7 @@
           {%- endcase -%}
         {%- endfor -%}
 
-        {%- if product.metafields.product_details -%}
-          <!-- Book Custom Metadata Container -->
+        {%- if product.metafields.product_details.size > 0 -%}
           <h2 id='book-metafields-header'>Product Details</h2>
           <table id='book-metafields-table'>
             <tbody>
