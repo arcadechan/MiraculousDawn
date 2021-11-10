@@ -102,6 +102,7 @@
               <div class="product__description rte">
                 {{ product.description }}
               </div>
+              <div id='read-more-button' style='display: none'>Read More...</div>
             {%- endif -%}
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
@@ -525,6 +526,41 @@
       hiddenInput.value = event.currentTarget.value;
     });
   });
+
+  // Custom Read More button
+  const description = document.querySelector('.product__description');
+  const descriptionChildren = description.children;
+  const textContentChildren = getTextContentChildren(descriptionChildren);
+  const contentHeight = description.offsetHeight;
+  const readMoreButton = document.querySelector('#read-more-button');
+  let toggle = false;
+
+  // assume read more should appear after 3rd child element
+  if( textContentChildren.length > 3 && contentHeight >= 300 ){
+    readMoreButton.style.display = 'inline-block'; // show read more button
+    toggleDescription(descriptionChildren); //hide all child elements that come after the third element
+
+    // set up event listener
+    readMoreButton.addEventListener('click', function(){
+      toggle = !toggle;
+      toggleDescription(descriptionChildren, toggle);
+    });
+  }
+
+  function toggleDescription(children, toggle = false){
+    for(let i = 2; i < children.length; i++){
+      const child = children[i];
+      if(child.nodeName.toLowerCase() !== 'style'){ //ignore style tags
+        child.style.display = toggle ? 'block' : 'none';
+      }
+    }
+    readMoreButton.innerText = toggle ? 'Read Less...' : 'Read More...';
+  }
+
+  //filter out style tags
+  function getTextContentChildren(children){
+    return Array.from(children).filter( child => child.nodeName.toLowerCase() !== 'style');
+  }
 </script>
 
 {%- if first_3d_model -%}
