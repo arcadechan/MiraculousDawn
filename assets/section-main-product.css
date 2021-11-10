@@ -1019,3 +1019,46 @@ a.product__text {
     display: none;
   }
 }
+
+#book-metafields-header {
+  color: #4f4788;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+
+#book-metafields-table {
+  border-radius: 10px;
+  box-shadow: 0 0 0 .2rem #e3e3e3;
+  width: 100%;
+}
+
+#book-metafields-table tbody tr td {
+  border: .2rem solid #e3e3e3;
+}
+
+#book-metafields-table tbody tr td.book-metafield-name,
+#book-metafields-table tbody tr td.book-metafield-value {
+  color: #484848;
+  font-family: 'Roboto', sans-serif;
+}
+
+#book-metafields-table tbody tr td.book-metafield-name {
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 150px;
+}
+
+@media screen and (min-width: 750px){
+  #book-metafields-table {
+    width: auto;
+  } 
+
+  #book-metafields-table tbody tr td.book-metafield-name {
+    min-width: 200px;
+  }
+
+  #book-metafields-table tbody tr td.book-metafield-value {
+    width: 100%;
+  }  
+}
