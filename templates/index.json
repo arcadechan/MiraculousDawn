@@ -1,43 +1,5 @@
 {
   "sections": {
-    "1636602871819432f2": {
-      "type": "image-banner",
-      "blocks": {
-        "1636602871819432f2-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Inspire curiosity with STEM toys",
-            "heading_size": "large"
-          }
-        },
-        "1636602871819432f2-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/stem",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "1636602871819432f2-0",
-        "1636602871819432f2-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/children-sharing-and-playing-with-toys.jpg",
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_text_box_position": "center",
-        "show_text_box": true,
-        "image_overlay_opacity": 100,
-        "color_scheme": "background-1",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "1635643802784f5d9d": {
       "type": "collection-list",
       "blocks": {
@@ -125,7 +87,6 @@
     }
   },
   "order": [
-    "1636602871819432f2",
     "1635643802784f5d9d",
     "featured_products",
     "multi_column"
