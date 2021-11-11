@@ -128,8 +128,8 @@
     {%- endif -%}
 
     {%- if request.page_type  == 'index' -%}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
       <style>
         /* Custom Carousel CSS */
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
@@ -143,17 +143,17 @@
         }
 
         /* BEGIN GLOBAL SETTINGS */
-        .banner {
+        .custom-banner {
             display: block;
             width: 100%;
         }
 
-        .banner .banner-image {
+        .custom-banner .banner-image {
             width: 100%;
             display: block;
         }
 
-        .banner .banner-content {
+        .custom-banner .banner-content {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -162,16 +162,16 @@
             position: relative;
         }
 
-        .banner .banner-content .banner-tagline-container,
-        .banner .banner-content .banner-shop-now-button-container {
+        .custom-banner .banner-content .banner-tagline-container,
+        .custom-banner .banner-content .banner-shop-now-button-container {
             position: relative;
         }
 
-        .banner .banner-content .banner-tagline-container {
+        .custom-banner .banner-content .banner-tagline-container {
             margin-bottom: 3rem;
         }
 
-        .banner .banner-content .banner-tagline-container .banner-message {
+        .custom-banner .banner-content .banner-tagline-container .banner-message {
             font-family: "Quicksand";
             font-weight: 700;
             color: #fff;
@@ -180,7 +180,7 @@
             margin: 0;
         }
 
-        .banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+        .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
             display: block;
             font-family: "DIN Pro Cond Black", serif;
             color: #fff;
@@ -193,305 +193,157 @@
             font-weight: bold;
             padding: .5rem 2rem;
             text-decoration: none;
+            z-index: 999;
         }
 
         .decorative-icon {
             position: absolute;
         }
 
-        .banner .banner-image.mobile {
+        .custom-banner .banner-image.mobile {
             display: block;
         }
 
-        .banner .banner-image.desktop {
+        .custom-banner .banner-image.desktop {
             display: none;
         }
 
         /* TABLET */
         @media only screen and (min-width: 768px){
-            .banner .banner-image.mobile {
+            .custom-banner .banner-image.mobile {
                 display: none;
             }
 
-            .banner .banner-image.desktop {
+            .custom-banner .banner-image.desktop {
                 display: block;
             }
 
-            .banner {
+            .custom-banner {
                 display: flex;
                 max-width: 1920px;
                 margin: 0 auto;
             }
 
-            .banner.summer-stem-activities,
-            .halloween {
+            .custom-banner.summer-stem-activities,    
+            .custom-banner.halloween, 
+            .custom-banner.fall { 
                 flex-direction: row-reverse;
             }
 
-            .banner .banner-image {
+            .custom-banner .banner-image {
                 width: 66.9999%;
                 height: auto;
             }
 
-            .banner .banner-content {
+            .custom-banner .banner-content {
                 width: 34.9999%;
                 padding: 2.5rem 0 0rem;
             }
 
-            .banner .banner-content .banner-tagline-container {
+            .custom-banner .banner-content .banner-tagline-container {
                 margin-bottom: 1.5rem;
             }
 
-            .banner .banner-content .banner-tagline-container .banner-message {
+            .custom-banner .banner-content .banner-tagline-container .banner-message {
                 font-size: 3.5vw;
             }
 
-            .banner .banner-content .banner-shop-now-button-container {
+            .custom-banner .banner-content .banner-shop-now-button-container {
                 max-width: 60%;
             }
 
-            .banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+            .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
                 font-size: 1.25rem;
             }
         }
 
         @media only screen and (min-width: 1000px){
-            .banner .banner-content .banner-tagline-container .banner-message {
+            .custom-banner .banner-content .banner-tagline-container .banner-message {
                 font-size: 3.5vw;
             }
 
-            .banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+            .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
                 font-size: 2vw;
             }
         }
 
         @media only screen and (min-width: 1920px){
-            .banner .banner-content .banner-tagline-container .banner-message {
+            .custom-banner .banner-content .banner-tagline-container .banner-message {
                 font-size: 4.25rem;
             }
 
-            .banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+            .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
                 font-size: 2.5rem;
                 padding: .5rem 4rem;
             }
         }
 
-        /* BEGIN HALLOWEE BANNER STYLES */
-        .banner.halloween {
-            background-color: #522d9d;
+        /* Beging Fall Banner Leaf Styles */
+        .custom-banner .banner-content .banner-tagline-container {
+            background-image: url({{ 'leaf-1-2-background.png' | file_url}});
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        .banner.halloween .banner-content .spider-web {
-            max-width: 8rem;
-            width: 100%;
-            height: 9rem;
-            top: 0;
-            left: 0;
-            position: absolute;
+        .custom-banner .banner-content .banner-tagline-container .banner-message {
+            color: #a23c47;
         }
 
-        .banner.halloween .banner-content .banner-shop-now-button-container .shop-now-button .ghosts {
+        .fall .banner-tagline-container .autumn-text {
+            display: block;
+            width: 50%;
+            margin: 0 auto
+        }
+
+        .fall .banner-tagline-container .autumn-leaf-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        .custom-banner .banner-content .leaf-1,
+        .custom-banner .banner-content .leaf-2 {
             max-width: 5rem;
-            top: -1rem;
+        }
+
+        .custom-banner .banner-content .leaf-1 {
+            left: 4rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+            background-color: #a23c47;
+            text-transform: uppercase;
+        }
+
+        .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button .leaf-3 {
+            max-width: 5rem;
+            top: 1rem; 
             right: -4rem;
         }
 
-        .banner.halloween .banner-content .banner-shop-now-button-container .shop-now-button {
-            background-color: #eb7d0c;
-        }
-
         @media only screen and (min-width: 768px){
-            .banner.halloween .banner-content .spider-web {
-                max-width: 30%;
-                width: 100%;
-                top: 0;
-                left: 0;
-                position: absolute;
-                height: auto;
+            .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button .leaf-3 {
+                width: 3.5vw;
+                right: -2rem;
             }
-            
-            .banner.halloween .banner-content .banner-shop-now-button-container .shop-now-button .ghosts {
-                max-width: 4rem;
-            } 
         }
 
         @media only screen and (min-width: 1000px){
-            .banner.halloween .banner-content .banner-shop-now-button-container .shop-now-button .ghosts {
-                max-width: 5rem;
+            .custom-banner .banner-content .banner-tagline-container .banner-message {
+                font-size: 2.5vw;
+            }
+
+            .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button .leaf-3 {
+                top: 2rem;
+                right: -3rem;
             }
         }
 
         @media only screen and (min-width: 1500px){
-            .banner.halloween .banner-content .banner-shop-now-button-container .shop-now-button .ghosts {
-                max-width: 6rem;
-                right: -5rem;
-            }
-        }
-
-        @media only screen and (min-width: 1920px){
-            .banner.halloween .banner-content .banner-shop-now-button-container .shop-now-button .ghosts {
-                max-width: 8rem;
-                top: -2rem;
-                right: -6rem;
-            }
-        }
-        /* END HALLOWEE BANNER STYLES */
-
-        /* BEGIN HIT THE BOOKS THIS SUMMER BANNER STYLES */
-        .banner.hit-the-books-this-summer-banner {
-            background-color: #fec92f;
-        }
-
-        .banner.hit-the-books-this-summer-banner .banner-content .banner-tagline-container .banner-message .sunglasses {
-            max-width: 5.5rem;
-            top: -1.9rem;
-            right: -1.75rem;
-            transform: rotate(40deg);
-        }
-
-        .banner.hit-the-books-this-summer-banner .banner-content .banner-shop-now-button-container .shop-now-button .book {
-            max-width: 3rem;
-            top: -.5rem;
-            left: -4rem;
-            transform: rotate(30deg);
-        }
-
-        @media only screen and (min-width: 768px){
-            .banner .banner-content {
-                padding: calc(3rem + 2vw) 0 0;
-            }
-
-            .banner .banner-content .banner-tagline-container {
-                margin-bottom: 2rem;
-            }
-
-            .banner.hit-the-books-this-summer-banner .banner-content .banner-tagline-container .banner-message .sunglasses {
-                width: 6vw;
-                max-width: none;
-                top: -1.5vw;
-                right: -2vw;
-            }
-            
-            .banner.hit-the-books-this-summer-banner .banner-content .banner-shop-now-button-container .shop-now-button .book {
-                width: 4vw;
-                max-width: none;
-                top: -.75rem;
-                left: -5vw;
-            }
-        }
-
-        @media only screen and (min-width: 1000px){
-          .banner .banner-content .banner-tagline-container {
-                margin-bottom: 3rem;
-          }
-        }
-
-        @media only screen and (min-width: 1920px){
-            .banner.hit-the-books-this-summer-banner .banner-content .banner-tagline-container .banner-message .sunglasses {
-                width: 115.118px;
-                top: -28.8px;
-                right: -38.4px;
-            }
-            
-            .banner.hit-the-books-this-summer-banner .banner-content .banner-shop-now-button-container .shop-now-button .book {
-                width: 76.7969px;
-                top: -12px;
-                left: -96px;
-            }
-        }
-        /* END HIT THE BOOKS THIS SUMMER BANNER STYLES */
-
-        /*  BEGIN SUMMER STEM ACTIVITIES BANNER STYLES */
-        .banner.summer-stem-activities {
-            background-color: #04aeef;
-        }
-
-        .banner.summer-stem-activities .banner-content .banner-tagline-container .banner-message .sun {
-            max-width: 4rem;
-            top: -4rem;
-            left: -1.5rem;
-            transform: rotate(40deg);
-        }
-
-        .banner.summer-stem-activities .banner-content .banner-shop-now-button-container .shop-now-button .sandals {
-            max-width: 3rem;
-            top: -.5rem;
-            right: -4rem;
-            transform: rotate(30deg);
-        }
-
-        @media only screen and (min-width: 768px){
-            .banner.summer-stem-activities .banner-content .banner-tagline-container .banner-message .sun {
-                width: 6vw;
-                max-width: none;
-                top: -6vw;
-                left: -3.5vw;
-            }
-            
-            .banner.summer-stem-activities .banner-content .banner-shop-now-button-container .shop-now-button .sandals {
-                width: 4vw;
-                max-width: none;
-                top: -.75rem;
-                right: -5vw;
-            }
-        }
-
-        @media only screen and (min-width: 1920px){
-            .banner.summer-stem-activities .banner-content .banner-tagline-container .banner-message .sun {
-                width: 115.188px;
-                top: -115.2px;
-                left: -67.2px;
-            }
-            
-            .banner.summer-stem-activities .banner-content .banner-shop-now-button-container .shop-now-button .sandals {
-                width: 76.7969px;
-                top: -12px;
-                right: -96px;
-            }
-        }
-        /*  END SUMMER STEM ACTIVITIES BANNER STYLES */
-
-        .miraculous-education-carousel {
-            max-width: 1920px;
-            margin: 0 auto;
-        }
-
-        .slick-prev {
-            left: 10px;
-        }
-
-        .slick-next {
-            right: 10px;
-        }
-
-        .slick-prev,
-        .slick-next {
-            z-index: 100;
-            height: 40px;
-            width: 40px;
-        }
-
-        .slick-prev::before,
-        .slick-next::before {
-            font-size: 40px;
-            text-shadow: 2px 3px 5px rgba(0,0,0,.35);
-        }
-
-        .miraculous-education-carousel.slick-slider .slick-next:before,
-        .miraculous-education-carousel.slick-slider .slick-prev:before {
-            font-family: 'slick' !important;
-            color: #fff !important;
-        }
-
-        .miraculous-education-carousel.slick-slider .slick-next,
-        .miraculous-education-carousel.slick-slider .slick-prev {
-            top: 45vw;
-        }
-
-        @media only screen and (min-width: 768px){
-            .miraculous-education-carousel.slick-slider .slick-next,
-            .miraculous-education-carousel.slick-slider .slick-prev {
-                top: 50%;
+            .custom-banner .banner-content .banner-tagline-container .banner-message {
+                font-size: 4.25rem;
             }
         }
       </style>
@@ -508,31 +360,30 @@
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {%- if request.page_type  == 'index' -%}
-        <!-- <div id="miraculous-education-carousel-container">
+        <div id="miraculous-education-carousel-container">
           <div class="miraculous-education-carousel">
               <div class="banner-container">
-                  <div class="halloween banner" style="background-color: #522d9d;">
-                      <img src="https://cdn.shopify.com/s/files/1/0496/6373/8008/files/halloween_banner_desktop.jpg?v=1635621775" alt="" class="banner-image desktop">
-                      <img src="https://cdn.shopify.com/s/files/1/0496/6373/8008/files/halloween_banner_mobile.jpg?v=1635621775" alt="" class="banner-image mobile">
+                  <div class="fall custom-banner" style="background-color: #fdbb05;">
+                      <img src="{{ 'autumn_banner_1.jpg' | file_url }}" alt="" width="auto" height="auto" class="banner-image desktop" loading="lazy">
+                      <img src="{{ 'autumn_banner_1.jpg' | file_url }}" alt="" width="auto" height="auto" class="banner-image mobile" loading="lazy">
                       <div class="banner-content">
-                          <img class="decorative-icon spider-web" src="https://cdn.shopify.com/s/files/1/0496/6373/8008/files/spider_web.png?v=1635621775" alt="">
                           <div class="banner-tagline-container">
-                              <h1 class="banner-message">
-                                  Check out our<br>spooky books!
-                              </h1>
+                                <h1 class="banner-message">Check out our</h1>
+                                <img src="{{ 'banner_two_autumn.png' | file_url }}" alt="autumn" class="autumn-text" width="auto" height="auto" loading="lazy">
+                                <h1 class="banner-message">books!</h1>
                           </div>
                           <div class="banner-shop-now-button-container">
-                              <a class="shop-now-button" href="/collections/halloween">
-                                  Shop Now
-                                  <img class="decorative-icon ghosts" src="https://cdn.shopify.com/s/files/1/0496/6373/8008/files/ghosts.png?v=1635621775" alt="">
-                              </a>
+                                <a class="shop-now-button" href="/collections/books">
+                                    Shop Now!
+                                    <img class="decorative-icon leaf-3" src="{{ 'banner_two_leaf_3.png' | file_url }}" alt="" width="auto" height="auto" loading="lazy">
+                                </a>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
             $(document).ready(function(){
