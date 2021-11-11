@@ -47,7 +47,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Halloween Favorites",
-        "collection": "best-selling-products",
+        "collection": "books",
         "products_to_show": 8,
         "show_view_all": false,
         "swipe_on_mobile": true,
