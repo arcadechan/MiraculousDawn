@@ -46,10 +46,10 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Halloween Favorites",
-        "collection": "best-selling-products",
+        "title": "Book Favorites",
+        "collection": "books",
         "products_to_show": 8,
-        "show_view_all": false,
+        "show_view_all": true,
         "swipe_on_mobile": true,
         "image_ratio": "square",
         "show_secondary_image": false,
