@@ -18,7 +18,7 @@
         "cbc7c342-6b68-4d94-b8f0-11cbc5396fdf": {
           "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
           "settings": {
-            "stars_fill_color": "#32bdb6",
+            "stars_fill_color": "#10069f",
             "star_size": 16,
             "text_align": "flex-start",
             "product": "{{product}}",
