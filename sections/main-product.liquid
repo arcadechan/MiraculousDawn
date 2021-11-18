@@ -420,6 +420,7 @@
           </table>
         {%- endif -%}
 
+        {% comment %}
         <div id='product-tags'>
           {%- for tag in product.tags -%}
             <div class='product-tag'>
@@ -427,6 +428,7 @@
             </div>
           {%- endfor -%}
         </div>
+        {% endcomment %}
         {%- if producttype == 'book' -%}
           <div class='book-reading-level-link mobile-reading-level'>
             <a href="/blogs/main/what-are-reading-levels" style="text-decoration:underline;" title="Click here to read our guide: An Introduction to Reading Levels">
