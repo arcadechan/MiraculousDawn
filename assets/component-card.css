@@ -323,3 +323,40 @@
     transition: background-color var(--duration-long) ease;
   }
 }
+
+/* CUSTOM CSS */
+.grid__item {
+  position: relative;
+}
+
+.card-quick-buy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  visibility: visible;
+  z-index: 999;
+  margin-right: 1.15rem;
+  margin-bottom: 1.15rem;
+  cursor: pointer; 
+}
+
+.card-quick-buy .card-quick-buy-button-container button.card-quick-buy-button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.card-quick-buy .card-quick-buy-button-container button.card-quick-buy-button svg.icon {
+  width: 2rem;
+}
+
+.card-quick-buy .card-quick-buy-button-container button.card-quick-buy-button svg.icon path {
+  fill: #484848;
+}
+
+@media screen and (min-width: 751px){
+  .card-quick-buy .card-quick-buy-button-container button.card-quick-buy-button svg.icon {
+    width: 2.75rem;
+    height: 2.5rem;
+  } 
+}

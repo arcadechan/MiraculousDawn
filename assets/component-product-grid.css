@@ -19,3 +19,8 @@
     margin-bottom: calc(-1rem - var(--page-width-margin));
   }
 }
+
+/* CUSTOM CSS */
+.boost-pfs-action-list-wrapper .boost-pfs-action-extend {
+  bottom: 1.5rem !important;
+}

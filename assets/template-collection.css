@@ -78,7 +78,7 @@
 }
 
 #main-collection-filters .facets-container .product-count {
-  color: #0abbb2; /* global teal is #32bdb6; this version is slightly darker for light backgrounds and text*/
+  color: #0daca4; /* global teal is #32bdb6; this version is slightly darker for light backgrounds and text*/
 }
 
 #main-collection-filters .facets-container .mobile-facets__open svg.icon {
