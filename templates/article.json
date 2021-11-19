@@ -24,8 +24,7 @@
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         },
         "a25f6d83-438d-4ba6-8482-94eba91f8a66": {
           "type": "share",
@@ -41,8 +40,7 @@
         "content",
         "a25f6d83-438d-4ba6-8482-94eba91f8a66"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

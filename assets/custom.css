@@ -279,7 +279,8 @@ header-drawer .menu-drawer-container summary.header__icon--menu span svg path{
 
 /* Product Card */
 .grid .grid__item {
-    padding-left: 3rem;
+    /* padding-left: 3rem; */
+    padding: 1.5rem;
 }
 
 .grid .grid__item .card-wrapper {
