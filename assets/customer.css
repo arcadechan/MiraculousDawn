@@ -813,13 +813,14 @@ form[action='/account/recover'] button {
 }
 
 .customer.account *,
-a
-a[href="/account/logout"],
-a[href="/account/"] {
+a,
+a[href="/account"],
+a[href="/account/logout"] {
   font-family: 'Nunito', sans-serif;
 }
 
 a,
+a[href="/account"],
 a[href="/account/logout"] {
   font-size: 2rem;
 }
