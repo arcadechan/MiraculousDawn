@@ -811,3 +811,23 @@ form[action='/account/recover'] button {
     border-radius: 10px;
   }
 }
+
+.customer.account *,
+a
+a[href="/account/logout"],
+a[href="/account/"] {
+  font-family: 'Nunito', sans-serif;
+}
+
+a,
+a[href="/account/logout"] {
+  font-size: 2rem;
+}
+
+.customer.addresses button {
+  border-radius: 5px;
+  color: #4F4788;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
