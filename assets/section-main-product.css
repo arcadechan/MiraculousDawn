@@ -1102,3 +1102,13 @@ a.product__text {
     padding-left: 3rem;
   } 
 }
+
+.spr-stars span[aria-label="0 out of 5 stars"] {
+  display: none;
+}
+
+.spr-review-content-body {
+  font-size: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  color: #484848;
+}
