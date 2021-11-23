@@ -1,1 +1,94 @@
-{"sections":{"1635643802784f5d9d":{"type":"collection-list","blocks":{"1635643802784f5d9d-0":{"type":"featured_collection","settings":{"collection":"books"}},"1635643802784f5d9d-1":{"type":"featured_collection","settings":{"collection":"games"}},"1635643802784f5d9d-2":{"type":"featured_collection","settings":{"collection":"stem"}},"bf75f46c-4f88-43b2-a7b7-04771629d7c8":{"type":"featured_collection","settings":{"collection":"educational-supplies"}}},"block_order":["1635643802784f5d9d-0","1635643802784f5d9d-1","1635643802784f5d9d-2","bf75f46c-4f88-43b2-a7b7-04771629d7c8"],"settings":{"title":"Shop by categories","image_ratio":"square","color_scheme":"background-1","swipe_on_mobile":false,"image_padding":true,"show_view_all":false}},"featured_products":{"type":"featured-collection","settings":{"title":"Book Favorites","collection":"books","products_to_show":8,"show_view_all":true,"swipe_on_mobile":true,"image_ratio":"square","show_secondary_image":false,"add_image_padding":true,"show_image_outline":true,"show_vendor":false,"show_rating":false}},"multi_column":{"type":"multicolumn","blocks":{"column1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/a-mother-smiles-as-a-father-holds-their-baby.jpg","title":"","text":"<p><a href=\"\/blogs\/main\" title=\"News\">check our news & events<\/a><\/p>"}}},"block_order":["column1"],"settings":{"title":"","image_width":"full","image_ratio":"adapt","column_alignment":"center","background_style":"primary","button_label":"","button_link":"","swipe_on_mobile":false}}},"order":["1635643802784f5d9d","featured_products","multi_column"]}
+{
+  "sections": {
+    "1635643802784f5d9d": {
+      "type": "collection-list",
+      "blocks": {
+        "1635643802784f5d9d-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "books"
+          }
+        },
+        "1635643802784f5d9d-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "games"
+          }
+        },
+        "1635643802784f5d9d-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "stem"
+          }
+        },
+        "bf75f46c-4f88-43b2-a7b7-04771629d7c8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "educational-supplies"
+          }
+        }
+      },
+      "block_order": [
+        "1635643802784f5d9d-0",
+        "1635643802784f5d9d-1",
+        "1635643802784f5d9d-2",
+        "bf75f46c-4f88-43b2-a7b7-04771629d7c8"
+      ],
+      "settings": {
+        "title": "Shop by categories",
+        "image_ratio": "square",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": false,
+        "image_padding": true,
+        "show_view_all": false
+      }
+    },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Book Favorites",
+        "collection": "books",
+        "products_to_show": 8,
+        "show_view_all": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": true,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "multi_column": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Home_Page_News_Image_800x800_38a03bf0-ac08-4261-8605-071ce0d9c34d.png",
+            "title": "",
+            "text": "<p><a href=\"\/blogs\/main\" title=\"News\">check our news & events<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "column1"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    }
+  },
+  "order": [
+    "1635643802784f5d9d",
+    "featured_products",
+    "multi_column"
+  ]
+}
