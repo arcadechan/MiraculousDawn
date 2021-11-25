@@ -1112,3 +1112,17 @@ a.product__text {
   font-family: 'Nunito', sans-serif;
   color: #484848;
 }
+
+.slick-dots li button:before {
+  font-size: 1.5rem;
+}
+
+.product__media.grid__item {
+  padding-left: 1.5rem;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #4f4788;
+  opacity: .8;
+}
