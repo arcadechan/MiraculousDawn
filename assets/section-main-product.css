@@ -995,6 +995,11 @@ a.product__text {
     padding-left: 3rem !important;
   }
 
+  .product-section .product .grid__item.product__media {
+    padding: 1.5rem !important;
+    z-index: 2;
+  }
+
   .product-section .product .grid__item.product__media-wrapper {
     max-width: 500px !important;
   }
@@ -1086,7 +1091,7 @@ a.product__text {
 }
 
 .desktop-social-icon-container {
-  margin-top: 1.5rem;
+  margin-top: 3.5rem;
   padding-left: .5rem;
   text-align: center;
 }
@@ -1125,4 +1130,25 @@ a.product__text {
 .slick-next:before {
   color: #4f4788;
   opacity: .8;
+}
+
+.slider-nav {
+  display: none;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 698px) {
+  .slider-nav {
+    display: block;
+  }
+}
+
+.mfp-container {
+  background-color: rgba(0,0,0,0.75);
+}
+
+.mfp-bottom-bar .mfp-counter {
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
 }

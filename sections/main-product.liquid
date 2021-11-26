@@ -16,6 +16,9 @@
 <script src="{{ 'jquery-3.6.0.min.js' | asset_url }}"></script>
 <script src="{{ 'slick.min.js' | asset_url }}"></script>
 
+{{ 'magnific-popup.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'jquery.magnific-popup.min.js' | asset_url }}"></script>
+
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -33,7 +36,7 @@
         <div class="slider-for">
           {%- for media in product.media -%}
             {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-              <div class="custom-slide">
+              <a class="custom-slide" href="{{ media | img_url: '1500x' }}">
                 <div class="product__media media media--transparent" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
                   <img
                     srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
@@ -50,81 +53,79 @@
                     alt="{{ media.preview_image.alt | escape }}"
                   >
                 </div>
-              </div>
+              </a>
             {%- endunless -%}
           {%- endfor -%}
         </div>
-        <div class="slider-nav">
-          {%- for media in product.media -%}
-            {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-              <div class="custom-slide">
-                <div class="product__media media media--transparent" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
-                  <img
-                    srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
-                      {% if media.preview_image.width >= 576 %}{{ media.preview_image | img_url: '576x' }} 576w,{% endif %}
-                      {% if media.preview_image.width >= 750 %}{{ media.preview_image | img_url: '750x' }} 750w,{% endif %}
-                      {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w,{% endif %}
-                      {% if media.preview_image.width >= 1500 %}{{ media.preview_image | img_url: '1500x' }} 1500w,{% endif %}
-                      {{ media.preview_image | img_url: 'master' }} {{ media.preview_image.width }}w"
-                    src="{{ media | img_url: '1500x' }}"
-                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: 0.64 | round }}px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
-                    loading="lazy"
-                    width="576"
-                    height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
-                    alt="{{ media.preview_image.alt | escape }}"
-                  >
+        {% if product.media.size > 1 %}
+          <div class="slider-nav">
+            {%- for media in product.media -%}
+              {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+                <div class="custom-slide">
+                  <div class="product__media media media--transparent" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
+                    <img
+                      srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
+                        {% if media.preview_image.width >= 576 %}{{ media.preview_image | img_url: '576x' }} 576w,{% endif %}
+                        {% if media.preview_image.width >= 750 %}{{ media.preview_image | img_url: '750x' }} 750w,{% endif %}
+                        {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w,{% endif %}
+                        {% if media.preview_image.width >= 1500 %}{{ media.preview_image | img_url: '1500x' }} 1500w,{% endif %}
+                        {{ media.preview_image | img_url: 'master' }} {{ media.preview_image.width }}w"
+                      src="{{ media | img_url: '1500x' }}"
+                      sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: 0.64 | round }}px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
+                      loading="lazy"
+                      width="576"
+                      height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+                      alt="{{ media.preview_image.alt | escape }}"
+                      class="product-image-large"
+                    >
+                  </div>
                 </div>
-              </div>
-            {%- endunless -%}
-          {%- endfor -%}
-        </div>
+              {%- endunless -%}
+            {%- endfor -%}
+          </div>
+          <script>
+            $('.slider-for').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              fade: true,
+              swipe: false,
+              responsive: [
+                {
+                  breakpoint: 698,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    fade: false,
+                    dots: true
+                  }
+                }
+              ]
+            });
+            $('.slider-nav').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              asNavFor: '.slider-for',
+              dots: true,
+              arrows: true,
+              centerMode: true,
+              focusOnSelect: true,
+            });
+          </script>
+        {% endif %}
         <script>
-           $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav'
-          });
-          $('.slider-nav').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            dots: true,
-            arrows: true,
-            centerMode: true,
-            focusOnSelect: true
+          $(document).ready(function(){
+            $('.slider-for').magnificPopup({
+              delegate: 'a',
+              type: 'image',
+              gallery: {
+                enabled: true,
+                arrowMarkup: '<button title="%title% type="button" class="mfp-arrow mfp-arrow-%dir%"></button>'
+              }
+            });
           });
         </script>
-        {% comment %}
-        <ul class="product__media-list grid grid--peek list-unstyled slider slider--mobile" role="list">
-          {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
-          {%- if product.selected_or_first_available_variant.featured_media != null -%}
-            {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-            <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-              {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
-            </li>
-          {%- endif -%}
-          {%- for media in product.media -%}
-            {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-              <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-                {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
-              </li>
-            {%- endunless -%}
-          {%- endfor -%}
-        </ul>
-        
-        <div class="slider-buttons no-js-hidden{% if product.media.size < 2 %} small-hide{% endif %}">
-          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
-            <span class="slider-counter--total">{% if section.settings.hide_variants %}{{ product.media.size | minus: variant_images.size | plus: 1 }}{% else %}{{ product.media.size }}{% endif %}</span>
-          </div>
-          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
-        </div>
-        {% endcomment %}
       </slider-component>
       {%- if first_3d_model -%}
         <button
