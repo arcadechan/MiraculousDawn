@@ -1146,6 +1146,7 @@ a.product__text {
   width: auto !important;
   left: 50% !important;
   transform: translate(-50%);
+  object-fit: contain;
 }
 
 .slider-nav .custom-slide .product__media {
