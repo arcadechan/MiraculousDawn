@@ -46,8 +46,8 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Book Favorites",
-        "collection": "books",
+        "title": "Black Friday SALE!",
+        "collection": "black-friday",
         "products_to_show": 8,
         "show_view_all": true,
         "swipe_on_mobile": true,
