@@ -99,6 +99,7 @@
                     arrows: true,
                     fade: false,
                     dots: true,
+                    swipe: true
                   }
                 }
               ]
@@ -111,7 +112,15 @@
               arrows: true,
               centerMode: true,
               centerPadding: '100px',
-              focusOnSelect: true
+              focusOnSelect: true,
+              responsive: [
+                {
+                  breakpoint: 1000,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+              ]
             });
           </script>
         {% endif %}
@@ -123,6 +132,11 @@
               gallery: {
                 enabled: true,
                 arrowMarkup: '<button title="%title% type="button" class="mfp-arrow mfp-arrow-%dir%"></button>'
+              },
+              callbacks: {
+                buildControls: function(){
+                  this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+                }
               }
             });
           });
