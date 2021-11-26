@@ -37,7 +37,7 @@
           {%- for media in product.media -%}
             {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
               <a class="custom-slide" href="{{ media | img_url: '1500x' }}">
-                <div class="product__media media media--transparent" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
+                <div class="product__media media media--transparent">
                   <img
                     srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
                       {% if media.preview_image.width >= 576 %}{{ media.preview_image | img_url: '576x' }} 576w,{% endif %}
@@ -62,7 +62,7 @@
             {%- for media in product.media -%}
               {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                 <div class="custom-slide">
-                  <div class="product__media media media--transparent" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
+                  <div class="product__media media media--transparent">
                     <img
                       srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
                         {% if media.preview_image.width >= 576 %}{{ media.preview_image | img_url: '576x' }} 576w,{% endif %}
@@ -92,13 +92,13 @@
               swipe: false,
               responsive: [
                 {
-                  breakpoint: 698,
+                  breakpoint: 750,
                   settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: true,
                     fade: false,
-                    dots: true
+                    dots: true,
                   }
                 }
               ]
@@ -110,7 +110,8 @@
               dots: true,
               arrows: true,
               centerMode: true,
-              focusOnSelect: true,
+              centerPadding: '100px',
+              focusOnSelect: true
             });
           </script>
         {% endif %}
