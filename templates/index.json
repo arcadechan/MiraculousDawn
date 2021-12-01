@@ -46,7 +46,7 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Cyber Monday SALE!",
+        "title": "Featured Products!",
         "collection": "featured",
         "products_to_show": 8,
         "show_view_all": true,
