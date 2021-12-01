@@ -1,3 +1,7 @@
+.collection-hero {
+    display: none;
+}
+
 /* Custom Carousel CSS */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/din-pro-cond');
@@ -268,4 +272,68 @@
         max-width: 1920px;
         margin: 0 auto;
     }
+}
+
+.shopify-section.spaced-section:not(section[id$=image_banner]) {
+    margin-top: 0 !important;
+    margin: 0 !important;
+}
+
+#toydrive-category-bubbles {
+    display: block;
+    text-align: center;
+    max-width: 1920px;
+    margin: 5rem auto;
+}
+
+#toydrive-category-bubbles .toydrive-category-icon-container {
+    width: calc(50% - 6rem);
+    padding: 1.5rem;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+#toydrive-category-bubbles .toydrive-category-icon-container:hover .toydrive-category-icon {
+    filter: drop-shadow(1px 2px 3px #B2E6E4);
+    -webkit-filter: drop-shadow(1px 2px 3px #B2E6E4);
+}
+
+#toydrive-category-bubbles .toydrive-category-icon-container .toydrive-category-icon {
+    width: 100%;
+    max-width: 100px;
+}
+
+#toydrive-category-bubbles .toydrive-category-icon-container .toydrive-category-title {
+    width: 100%;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    color: #32bdb6;
+    font-weight: bolder;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px){
+    #toydrive-category-bubbles .toydrive-category-icon-container {
+        width: calc(25% - 6rem);
+        padding: 3rem;
+    }
+
+    #toydrive-category-bubbles .toydrive-category-icon-container .toydrive-category-title {
+        font-size: 2rem;
+    }
+}
+
+#icon-attribution {
+    font-family:'Nunito', sans-serif;
+    color:#bababa;
+    text-align: center;
+    font-size: 1rem;
+    margin: 3rem 0 1rem;
+}
+
+#icon-attribution a,
+#icon-attribution a:visited {
+    color: #bababa !important;
 }
