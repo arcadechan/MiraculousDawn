@@ -1,0 +1,339 @@
+.collection-hero {
+    display: none;
+}
+
+/* Custom Carousel CSS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/din-pro-cond');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px blue solid; */
+}
+
+/* BEGIN GLOBAL SETTINGS */
+.custom-banner {
+    display: block;
+    width: 100%;
+}
+
+.custom-banner .banner-image {
+    width: 100%;
+    display: block;
+}
+
+.custom-banner .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0 3rem;
+    position: relative;
+}
+
+.custom-banner .banner-content .banner-tagline-container,
+.custom-banner .banner-content .banner-shop-now-button-container {
+    position: relative;
+}
+
+.custom-banner .banner-content .banner-tagline-container {
+    margin-bottom: 3rem;
+}
+
+.custom-banner .banner-content .banner-tagline-container .banner-message {
+    font-family: "Quicksand";
+    font-weight: 700;
+    color: #fff;
+    font-size: 2.75rem;
+    text-align: center;
+    margin: 0;
+}
+
+.custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+    display: block;
+    font-family: "DIN Pro Cond Black", serif;
+    color: #fff;
+    background-color: #f09000;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 auto;
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: .5rem 2rem;
+    text-decoration: none;
+    z-index: 999;
+}
+
+.decorative-icon {
+    position: absolute;
+}
+
+.custom-banner .banner-image.mobile {
+    display: block;
+}
+
+.custom-banner .banner-image.desktop {
+    display: none;
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px){
+    .custom-banner .banner-image.mobile {
+        display: none;
+    }
+
+    .custom-banner .banner-image.desktop {
+        display: block;
+    }
+
+    .custom-banner {
+        display: flex;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .custom-banner.summer-stem-activities,    
+    .custom-banner.halloween, 
+    .custom-banner.fall { 
+        flex-direction: row-reverse;
+    }
+
+    .custom-banner .banner-image {
+        width: 66.9999%;
+        height: auto;
+    }
+
+    .custom-banner .banner-content {
+        width: 34.9999%;
+        padding: 2.5rem 0 0rem;
+    }
+
+    .custom-banner .banner-content .banner-tagline-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .custom-banner .banner-content .banner-tagline-container .banner-message {
+        font-size: 3.5vw;
+    }
+
+    .custom-banner .banner-content .banner-shop-now-button-container {
+        max-width: 60%;
+    }
+
+    .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .custom-banner .banner-content .banner-tagline-container .banner-message {
+        font-size: 3.5vw;
+    }
+
+    .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .custom-banner .banner-content .banner-tagline-container .banner-message {
+        font-size: 4.25rem;
+    }
+
+    .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+        font-size: 2.5rem;
+        padding: .5rem 4rem;
+    }
+}
+
+/* Beging Fall Banner Leaf Styles */
+
+.custom-banner .banner-content .banner-tagline-container .banner-message {
+    color: #a23c47;
+}
+
+.fall .banner-tagline-container .autumn-text {
+    display: block;
+    width: 50%;
+    margin: 0 auto
+}
+
+.fall .banner-tagline-container .autumn-leaf-container {
+    display: inline-block;
+    position: relative;
+}
+
+.custom-banner .banner-content .leaf-1,
+.custom-banner .banner-content .leaf-2 {
+    max-width: 5rem;
+}
+
+.custom-banner .banner-content .leaf-1 {
+    left: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button {
+    background-color: #a23c47;
+    text-transform: uppercase;
+}
+
+.custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button .leaf-3 {
+    max-width: 5rem;
+    top: 1rem; 
+    right: -4rem;
+}
+
+@media only screen and (min-width: 768px){
+    .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button .leaf-3 {
+        width: 3.5vw;
+        right: -2rem;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .custom-banner .banner-content .banner-tagline-container .banner-message {
+        font-size: 2.5vw;
+    }
+
+    .custom-banner .banner-content .banner-shop-now-button-container a.shop-now-button .leaf-3 {
+        top: 2rem;
+        right: -3rem;
+    }
+}
+
+@media only screen and (min-width: 1500px){
+    .custom-banner .banner-content .banner-tagline-container .banner-message {
+        font-size: 4.25rem;
+    }
+}
+
+#homepage-banner-container,
+#homepage-banner-container #homepage-mobile-banner,
+#homepage-banner-container #homepage-desktop-banner,
+#homepage-banner-container #homepage-mobile-banner img,
+#homepage-banner-container #homepage-desktop-banner img {
+    width: 100%;
+}
+
+#homepage-banner-container,
+#homepage-banner-container #homepage-mobile-banner,
+#homepage-banner-container #homepage-mobile-banner img {
+    display: block;
+}
+
+#homepage-banner-container #homepage-desktop-banner {
+    display: none;
+}
+
+#homepage-banner-container #homepage-mobile-banner .shop-now-button-container {
+    background-color: #001491;
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+#homepage-banner-container #homepage-mobile-banner .shop-now-button-container a.shop-now-button,
+#homepage-banner-container #homepage-mobile-banner .shop-now-button-container a.shop-now-button:visited {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #fa5d30;
+    border-radius: 6px;
+    padding: .75rem 1.75rem;
+}
+
+@media only screen and (min-width: 768px){
+    #homepage-banner-container #homepage-mobile-banner,
+    #homepage-banner-container #homepage-mobile-banner img {
+        display: none;
+    }
+
+    #homepage-banner-container #homepage-mobile-banner .shop-now-button-container {
+        display: none;
+    }
+
+    #homepage-banner-container #homepage-desktop-banner {
+        text-align: center;
+    }
+
+    #homepage-banner-container #homepage-desktop-banner,
+    #homepage-banner-container #homepage-desktop-banner img {
+        display: block;
+    }
+
+    #homepage-banner-container #homepage-desktop-banner img {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+.shopify-section.spaced-section:not(section[id$=image_banner]) {
+    margin-top: 0 !important;
+    margin: 0 !important;
+}
+
+#toydrive-category-bubbles {
+    display: block;
+    text-align: center;
+    max-width: 1920px;
+    margin: 5rem auto;
+}
+
+#toydrive-category-bubbles .toydrive-category-icon-container {
+    width: calc(50% - 6rem);
+    padding: 1.5rem;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+#toydrive-category-bubbles .toydrive-category-icon-container:hover .toydrive-category-icon {
+    filter: drop-shadow(1px 2px 3px #B2E6E4);
+    -webkit-filter: drop-shadow(1px 2px 3px #B2E6E4);
+}
+
+#toydrive-category-bubbles .toydrive-category-icon-container .toydrive-category-icon {
+    width: 100%;
+    max-width: 100px;
+}
+
+#toydrive-category-bubbles .toydrive-category-icon-container .toydrive-category-title {
+    width: 100%;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    color: #32bdb6;
+    font-weight: bolder;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px){
+    #toydrive-category-bubbles .toydrive-category-icon-container {
+        width: calc(25% - 6rem);
+        padding: 3rem;
+    }
+
+    #toydrive-category-bubbles .toydrive-category-icon-container .toydrive-category-title {
+        font-size: 2rem;
+    }
+}
+
+#icon-attribution {
+    font-family:'Nunito', sans-serif;
+    color:#bababa;
+    text-align: center;
+    font-size: 1rem;
+    margin: 3rem 0 1rem;
+}
+
+#icon-attribution a,
+#icon-attribution a:visited {
+    color: #bababa !important;
+}
