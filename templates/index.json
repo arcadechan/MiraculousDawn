@@ -46,8 +46,8 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured Products!",
-        "collection": "featured",
+        "title": "Featured STEM!",
+        "collection": "stem",
         "products_to_show": 8,
         "show_view_all": true,
         "swipe_on_mobile": true,
