@@ -22,6 +22,10 @@
   <div id='homepage-desktop-banner'>
     <img src="{{ 'toy-drive-landing-page-banner-desktop.png' | file_url }}" alt="Toy Drive. In partnership with Miraculous Minds, we are collecting unopened toys for underprivileged children in Orange County! Donate by December 17. All orders will be entered into a raffle! Top Prize: $100 Disneyland Gift Card" width="auto" height="auto" loading="lazy">
   </div>
+  <div id="banner-bottom-text">
+    <p>In partnership with MiraculousMinds, we are collecting unopened toys for underprivileged children in Orange County!</p>
+    <p>All orders will be entered into a raffle! Top Prize: $100 Disneyland Gift Card</p>
+  </div>
 </div>
 <div id="toydrive-category-bubbles">
   <a class="toydrive-category-icon-container" href="/collections/toy-drive-books">
@@ -45,6 +49,7 @@
 {%- paginate collection.products by section.settings.products_per_page -%}
 <div id="CollectionProductGrid">
 	<div class="collection page-width">
+    <h1 id="toydrive-product-grid-header" class="collection-hero__title">Our Favorite Toy Donations</h1>
 		<div class="boost-pfs-filter-refine-by-wrapper-h"></div>
     <ul id="main-collection-product-grid" data-id="{{ section.id }}" class=" negative-margin
                 boost-pfs-filter-products
@@ -64,16 +69,15 @@
     </ul>
 	</div>
 </div>
-<div id="icon-attribution">
-  Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-</div>
 
 <div class="boost-pfs-filter-load-more"></div>
 <link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
 <div class="boost-pfs-filter-bottom-pagination"></div>
 {%- endpaginate -%}
-
+<div id="icon-attribution">
+  Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+</div>
 <script>
 // Declare boostPFSThemeConfig variable
 var boostPFSThemeConfig = {
