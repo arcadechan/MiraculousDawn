@@ -328,16 +328,20 @@ header-drawer .menu-drawer-container summary.header__icon--menu span svg path{
     font-weight: 500;
 }
 
+.grid .grid__item .card-wrapper .card.card--product,
 .grid .grid__item .card-wrapper .card.card--product.card--outline {
     border: none;
     border-radius: 8px;
 }
 
+.grid .grid__item .card-wrapper .card.card--product .card__inner,
+.grid .grid__item .card-wrapper .card.card--product .card__inner .media,
 .grid .grid__item .card-wrapper .card.card--product.card--outline .card__inner,
 .grid .grid__item .card-wrapper .card.card--product.card--outline .card__inner .media {
     background-color: #fff;
 }
 
+.grid .grid__item .card-wrapper .card.card--product .card__inner .media img,
 .grid .grid__item .card-wrapper .card.card--product.card--outline .card__inner .media img {
     /* margin: 0 auto; */
     width: auto;
