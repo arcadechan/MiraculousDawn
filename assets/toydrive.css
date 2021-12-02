@@ -325,6 +325,24 @@
     }
 }
 
+#banner-bottom-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 3rem auto;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #32bdb6;
+}
+
+#toydrive-product-grid-header {
+    display: block;
+    width: 100%;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
 #icon-attribution {
     font-family:'Nunito', sans-serif;
     color:#bababa;
