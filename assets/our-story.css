@@ -1,0 +1,129 @@
+#our-story * {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(72,72,72);
+}
+
+#our-story #os-core h1,
+#our-story #os-team h1 {
+    text-transform: uppercase;
+}
+
+.os-content {
+    padding-bottom: 2.5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-width: 1920px;
+}
+
+#os-better-world #os-better-world-icon {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+#os-core #os-core-icons .os-image-text-pair {
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+
+#os-core #os-core-icons .os-image-text-pair:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#os-core #os-core-icons .os-image-text-pair .os-image {
+    width: 33%;
+    height: 100%;
+    margin: auto;
+}
+
+#os-core #os-core-icons .os-image-text-pair p {
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 1.75rem
+}
+
+#os-team .os-image-text-pair {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#os-team .os-image-text-pair .os-image {
+    max-width: 65%;
+}
+
+#os-team .os-image-text-pair p {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+#os-work-with-us h1 {
+    text-align: center;
+}
+
+#os-work-with-us #os-work-with-us-buttons {
+    text-align: center;
+}
+
+#os-work-with-us #os-work-with-us-buttons button {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #fa5d30;
+    border: 0;
+    border-radius: 6px;
+    padding: .75rem 1.75rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    #our-story #os-better-world {
+        display: flex;
+    }
+
+    #our-story #os-better-world #os-better-world-icon {
+        width: 25%;
+        height: 100%;
+        margin: auto;
+        max-width: none;
+    }
+
+    #our-story #os-better-world p {
+        width: 100%;
+        padding: 2rem
+    }
+
+    #our-story #os-core #os-core-icons,
+    #our-story #os-team #os-team-icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #our-story #os-core #os-core-icons .os-image-text-pair,
+    #our-story #os-team #os-team-icons .os-image-text-pair {
+        display: block;
+        width: 33%;
+    }
+
+    #os-core #os-core-icons .os-image-text-pair:nth-child(even) {
+        flex-direction: row;
+    }
+
+    #our-story #os-core #os-core-icons .os-image-text-pair .os-image {
+        display: block;
+        height: auto;
+    }
+
+    #os-work-with-us #os-work-with-us-buttons button {
+        font-size: 1.5rem;
+    }
+}
