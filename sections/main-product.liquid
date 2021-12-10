@@ -15,6 +15,7 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'jquery-3.6.0.min.js' | asset_url }}"></script>
 <script src="{{ 'slick.min.js' | asset_url }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 {{ 'magnific-popup.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'jquery.magnific-popup.min.js' | asset_url }}"></script>
@@ -376,6 +377,12 @@
               </div>
             </noscript>
           {%- when 'buy_buttons' -%}
+            <div id="back-order-alert" style="display:none;">
+              <p>
+                This item is currently on backorder which will affect ship time.
+                Please <a href="/pages/contact-us">Contact Us</a> if you have any questions.
+              </p>
+            </div>
             <div {{ block.shopify_attributes }}>
               <product-form class="product-form">
                 <div class="product-form__error-message-wrapper" role="alert" hidden>
@@ -615,6 +622,36 @@
 {% endjavascript %}
 
 <script>
+  const productHandle = '{{ product.handle }}';
+  const URL = 'https://d-bshopping.myshopify.com/api/graphql';
+  const query = `query ProductInventory {
+    productByHandle(handle: "${productHandle}") {
+      availableForSale
+      totalInventory
+    }
+  }`;
+
+  axios.post(URL, query ,{
+    headers: {
+      'Content-Type': 'application/graphql',
+      'X-Shopify-Storefront-Access-Token': '5e55561684e07e5023639d72c5fc030d'
+    }
+  }).then( res => {
+    if(res.data.errors){
+      console.error(res.data.errors);
+    }else{
+      const totalInventory = res.data.data.productByHandle.totalInventory;
+      if(totalInventory === 0){
+        const backOrderAlert = document.querySelector('#back-order-alert');
+        if(backOrderAlert){
+          backOrderAlert.style.display = 'block';
+        }
+      }
+    }
+  }).catch( err => {
+    console.error({err});
+  });
+  
   document.addEventListener('DOMContentLoaded', function() {
     function isIE() {
       const ua = window.navigator.userAgent;
