@@ -641,7 +641,7 @@
       console.error(res.data.errors);
     }else{
       const totalInventory = res.data.data.productByHandle.totalInventory;
-      if(totalInventory === 0){
+      if(totalInventory <= 0){
         const backOrderAlert = document.querySelector('#back-order-alert');
         if(backOrderAlert){
           backOrderAlert.style.display = 'block';
