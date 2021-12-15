@@ -10,27 +10,18 @@
   <div id='homepage-desktop-banner'>
     <img src="{{ 'toy-drive-landing-page-banner-desktop.png' | file_url }}" alt="Toy Drive. In partnership with Miraculous Minds, we are collecting unopened toys for underprivileged children in Orange County! Donate by December 17. All orders will be entered into a raffle! Top Prize: $100 Disneyland Gift Card" width="auto" height="auto" loading="lazy">
   </div>
-  <div id="banner-bottom-text">
-    <p>In partnership with MiraculousMinds, we are collecting unopened toys for underprivileged children in Orange County!</p>
-    <p>All orders will be entered into a raffle! Top Prize: $100 Disneyland Gift Card</p>
-    <br>
-    <p style="color:#10069F">
-      <i>All toys bought for the toy drive will be sent directly to MiraculousMinds.</i>
-      <i>No shipping information necessary.</i>
-    </p>
-  </div>
 </div>
 <div id="toydrive-category-bubbles">
   <a class="toydrive-category-icon-container" href="/blogs/tips-guides/tagged/books-games-supply-tips">
-    <img src="{{ 'toy-drive-books.png' | file_url }}" class="toydrive-category-icon" alt="" title="Book, Game, and Supply Tips" width="auto" height="auto" loading="lazy">
+    <img src="{{ 'tips-guides-books-games-supply-tips.png' | file_url }}" class="toydrive-category-icon" alt="" title="Book, Game, and Supply Tips" width="auto" height="auto" loading="lazy">
     <h6 class='toydrive-category-title'>Book, Game, and Supply Tips</h6>
   </a>
   <a class="toydrive-category-icon-container" href="/blogs/tips-guides/tagged/parent-tips">
-    <img src="{{ 'toy-drive-games.png' | file_url }}" class="toydrive-category-icon" alt="" title="Parent Tips" width="auto" height="auto" loading="lazy">
+    <img src="{{ 'tips-guides-parent-tips.png' | file_url }}" class="toydrive-category-icon" alt="" title="Parent Tips" width="auto" height="auto" loading="lazy">
     <h6 class='toydrive-category-title'>Parent Tips</h6>
   </a>
   <a class="toydrive-category-icon-container" href="/blogs/tips-guides/tagged/milas-reading-room">
-    <img src="{{ 'toy-drive-stem.png' | file_url }}" class="toydrive-category-icon" alt="" title="Toy Drive - STEM" width="auto" height="auto" loading="lazy">
+    <img src="{{ 'tips-guides-milas-reading-room.png' | file_url }}" class="toydrive-category-icon" alt="" title="Toy Drive - STEM" width="auto" height="auto" loading="lazy">
     <h6 class='toydrive-category-title'>Mila's Reading Room</h6>
   </a>
 </div>
@@ -39,11 +30,10 @@
 
   <div class="main-blog page-width">
     <!-- <h1 class="title--primary">{{ blog.title | escape }}</h1> -->
-
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
         <div class="blog-articles__article article">
-          {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
+          {%- render 'article-card-with-tags', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
         </div>
       {%- endfor -%}
     </div>
