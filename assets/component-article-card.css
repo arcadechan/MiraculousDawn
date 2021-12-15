@@ -258,3 +258,9 @@
     max-width: 50%;
   }   
 }
+
+.article-card .article-card__footer-tag-container {
+  margin-top: 1.15rem;
+  font-family: 'Nunito', sans-serif;
+  color: #484848;
+}
