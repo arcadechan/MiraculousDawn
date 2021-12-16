@@ -46,3 +46,20 @@
     padding-bottom: 82.5rem;
   }
 }
+
+/* CUSTOM CSS */
+.blog-articles .blog-articles__article.article {
+  width: 80%;
+  margin: 0 auto 2rem;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog-articles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .blog-articles .blog-articles__article.article {
+    width: 90%;
+  }
+}

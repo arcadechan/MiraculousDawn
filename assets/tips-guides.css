@@ -102,12 +102,18 @@
 
 @media screen and (min-width: 768px){
     #toydrive-category-bubbles .toydrive-category-icon-container {
-        width: calc(25% - 6rem);
+        width: calc(30% - 6rem);
         padding: 3rem;
     }
 
     #toydrive-category-bubbles .toydrive-category-icon-container .toydrive-category-title {
         font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 990px){
+    #toydrive-category-bubbles .toydrive-category-icon-container {
+        width: calc(25% - 6rem);
     }
 }
 
@@ -141,4 +147,9 @@
 #icon-attribution a,
 #icon-attribution a:visited {
     color: #bababa !important;
+}
+
+
+.toydrive-category-icon-container.active-blog-category .toydrive-category-title {
+    border-bottom: 3px solid #32bdb6;
 }
