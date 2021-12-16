@@ -12,15 +12,23 @@
   </div>
 </div>
 <div id="toydrive-category-bubbles">
-  <a class="toydrive-category-icon-container" href="/blogs/tips-guides/tagged/books-games-supply-tips">
+  <a 
+    class="toydrive-category-icon-container{% if request.path == "/blogs/tips-guides/tagged/book-game-and-supply-tips" %} active-blog-category{% endif %}" 
+    href="/blogs/tips-guides/tagged/book-game-and-supply-tips"
+  >
     <img src="{{ 'tips-guides-books-games-supply-tips.png' | file_url }}" class="toydrive-category-icon" alt="" title="Book, Game, and Supply Tips" width="auto" height="auto" loading="lazy">
     <h6 class='toydrive-category-title'>Book, Game, and Supply Tips</h6>
   </a>
-  <a class="toydrive-category-icon-container" href="/blogs/tips-guides/tagged/parent-tips">
+  <a
+    class="toydrive-category-icon-container{% if request.path == "/blogs/tips-guides/tagged/parent-tips" %} active-blog-category{% endif %}" 
+    href="/blogs/tips-guides/tagged/parent-tips"
+  >
     <img src="{{ 'tips-guides-parent-tips.png' | file_url }}" class="toydrive-category-icon" alt="" title="Parent Tips" width="auto" height="auto" loading="lazy">
     <h6 class='toydrive-category-title'>Parent Tips</h6>
   </a>
-  <a class="toydrive-category-icon-container" href="/blogs/tips-guides/tagged/milas-reading-room">
+  <a
+    class="toydrive-category-icon-container{% if request.path == "/blogs/tips-guides/tagged/milas-reading-room" %} active-blog-category{% endif %}"
+    href="/blogs/tips-guides/tagged/milas-reading-room">
     <img src="{{ 'tips-guides-milas-reading-room.png' | file_url }}" class="toydrive-category-icon" alt="" title="Toy Drive - STEM" width="auto" height="auto" loading="lazy">
     <h6 class='toydrive-category-title'>Mila's Reading Room</h6>
   </a>
