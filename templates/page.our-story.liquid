@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="{{ "our-story.css" | asset_url }}">
 <noscript>{{ "our-story.css" | asset_url  | stylesheet_tag }}</noscript>
 
+<div id="os-company-image" class="os-banner-image os-content">
+    <img src="{{ 'team_banner_mobile.jpg' | file_url }}" alt="" width="auto" height="auto" loading="lazy" class='os-banner-mobile page-width page-width--narrow'>
+    <img src="{{ 'team_banner_desktop.jpg' | file_url }}" alt="" width="auto" height="auto" loading="lazy" class='os-banner-desktop page-width page-width--desktop'>
+</div>
 <div id="our-story" class="page-width page-width--narrow">
-    <div id="os-company-image" class="os-banner-image os-content">
-        <!-- <img src="" alt="" width="auto" height="auto" loading="lazy"> -->
-        {{ 'lifestyle-1' | placeholder_svg_tag }}
-    </div>
     <div class="os-content">
         <h3>
             Education rooted in building confidence and delivering engaging,
@@ -69,40 +69,35 @@
         <h1>Meet the Team</h1>
         <div id="os-team-icons">
             <div class="os-image-text-pair">
-                <!-- <img src="{{ '' | asset_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy"> -->
-                {{ 'image' | placeholder_svg_tag: 'os-image' }}
+                <img src="{{ 'team_nathan.jpg' | file_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy">
                 <p>
                     Nathan Castro<br>
                     Operations & Community
                 </p>
             </div>
             <div class="os-image-text-pair">
-                <!-- <img src="{{ '' | asset_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy"> -->
-                {{ 'image' | placeholder_svg_tag: 'os-image' }}
+                <img src="{{ 'team_natalie.jpg' | file_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy">
                 <p>
                     Natalie Khamphanh<br>
                     Marketing & Design
                 </p>
             </div>
             <div class="os-image-text-pair">
-                <!-- <img src="{{ '' | asset_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy"> -->
-                {{ 'image' | placeholder_svg_tag: 'os-image' }}
+                <img src="{{ 'team_jaime.jpg' | file_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy">
                 <p>
-                    Jaimie Luu<br>
+                    Jaime Luu<br>
                     Director of Education
                 </p>
             </div>
             <div class="os-image-text-pair">
-                <!-- <img src="{{ '' | asset_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy"> -->
-                {{ 'image' | placeholder_svg_tag: 'os-image' }}
+                <img src="{{ 'team_bradley.jpg' | file_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy">
                 <p>
                     Bradley Minton<br>
                     Finance & Strategy
                 </p>
             </div>
             <div class="os-image-text-pair">
-                <!-- <img src="{{ '' | asset_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy"> -->
-                {{ 'image' | placeholder_svg_tag: 'os-image' }}
+                <img src="{{ 'team_lauren.jpg' | file_url }}" alt="" class="os-image" width="auto" height="auto" loading="lazy">
                 <p>
                     Lauren Peterson<br>
                     Content
