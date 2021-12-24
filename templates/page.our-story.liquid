@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ "our-story.css" | asset_url }}">
-<noscript>{{ "our-story.css" | asset_url  | stylesheet_tag }}</noscript>
+<noscript>{{ "our-story.css" | asset_url | stylesheet_tag }}</noscript>
 
 <div id="os-company-image" class="os-banner-image os-content">
     <img src="{{ 'team_banner_mobile.jpg' | file_url }}" alt="" width="auto" height="auto" loading="lazy" class='os-banner-mobile page-width page-width--narrow'>
@@ -36,10 +36,11 @@
             community is the reason behind all that we do. We find joy in what we do and who we spend our days with.
         </p>
     </div>
-    <div id="os-image-two" class="os-banner-image os-content">
-        <!-- <img src="" alt="" width="auto" height="auto" loading="lazy"> -->
-        {{ 'lifestyle-1' | placeholder_svg_tag }}
-    </div>
+    <!-- 
+        <div id="os-image-two" class="os-banner-image os-content">
+            <img src="" alt="" width="auto" height="auto" loading="lazy">
+        </div>
+    -->
     <div id="os-core" class="os-content">
         <h1>The Core of it All</h1>
         <div id="os-core-icons">
@@ -111,8 +112,9 @@
             <b>Start Building</b>
         </h1>
         <div id="os-work-with-us-buttons">
-            <button>Work With Us</button>
-            <button>Work For Us</button>
+            <a href="/pages/contact-us">
+                <button>Work With Us</button>
+            </a>
         </div>
     </div>
 </div>
