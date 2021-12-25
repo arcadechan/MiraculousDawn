@@ -223,7 +223,13 @@
                   </details>
                 </details-disclosure>
               {%- else -%}
-                <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                {% assign link_url = link.url %}
+                {% if link.url == "/blogs/tips-guides" %}
+                  {%- capture link_url -%}
+                    {{ link.url}}{{'/tagged/milas-reading-room'}}
+                  {%- endcapture -%}
+                {% endif %}
+                <a href="{{ link_url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                   <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                 </a>
               {%- endif -%}
@@ -401,7 +407,13 @@
                             </div>
                           </details>
                         {%- else -%}
-                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                          {% assign link_url = link.url %}
+                          {% if link.url == "/blogs/tips-guides" %}
+                            {%- capture link_url -%}
+                              {{ link.url}}{{'/tagged/milas-reading-room'}}
+                            {%- endcapture -%}
+                          {% endif %}
+                          <a href="{{ link_url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                             {{ link.title | escape }}
                           </a>
                         {%- endif -%}
