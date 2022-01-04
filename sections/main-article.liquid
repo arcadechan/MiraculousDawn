@@ -36,6 +36,36 @@
         {%- endif -%}
 
         {%- when 'title'-%}
+          {%- if blog.next_article or blog.previous_article -%}
+            <style>
+              .article-template header {
+                margin-top: 0;
+              }
+            </style>
+
+            <div id='blog-nav-arrows-top-container' class='blog-nav-arrows page-width page-width--narrow rte'>
+              {%- if blog.next_article -%}  
+                <div class='next-article-arrow'>
+                  <a href='{{ blog.next_article }}' class='animate-arrow'>
+                    <span class='icon-wrap icon-arrow-left'>{% render 'icon-arrow' %}</span>
+                    <span>Next Article</span>
+                  </a>
+                </div>
+              {%- endif -%}
+              {%- if blog.previous_article -%}
+                {%- unless blog.next_article -%}
+                  <div class="next-article-arrow"></div>
+                {%- endunless -%}
+                <div class='prev-article-arrow'>
+                    <a href='{{ blog.previous_article }}' class="animate-arrow">
+                      <span>Previous Article</span>
+                      <span class="icon-wrap icon-arrow-right">{% render 'icon-arrow' %}</span>
+                    </a>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
           <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
             <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
             {%- if block.settings.blog_show_date -%}
@@ -94,9 +124,30 @@
           </div>
     {%- endcase -%}
   {%- endfor -%}
+  <div id='blog-nav-arrows-bottom-container' class='blog-nav-arrows page-width page-width--narrow rte'>
+    {%- if blog.next_article -%}  
+      <div class='next-article-arrow'>
+        <a href='{{ blog.next_article }}' class='animate-arrow'>
+          <span class='icon-wrap icon-arrow-left'>{% render 'icon-arrow' %}</span>
+          <span>Next Article</span>
+        </a>
+      </div>
+    {%- endif -%}
+    {%- if blog.previous_article -%}
+      {%- unless blog.next_article -%}
+        <div class="next-article-arrow"></div>
+      {%- endunless -%}
+      <div class='prev-article-arrow'>
+          <a href='{{ blog.previous_article }}' class="animate-arrow">
+            <span>Previous Article</span>
+            <span class="icon-wrap icon-arrow-right">{% render 'icon-arrow' %}</span>
+          </a>
+      </div>
+    {%- endif -%}
+  </div>
 
-  <div class="element-margin center">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
+  <div class="center">
+    <a id="back-to-blog" href="{{ blog.url }}" class="article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
       <span class="icon-wrap">{% render 'icon-arrow' %}</span>
       {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
     </a>
