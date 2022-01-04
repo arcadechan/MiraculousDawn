@@ -211,3 +211,62 @@ span time,
 .article-template__content h6 {
   color: #4f4788;
 }
+
+#blog-nav-arrows-top-container,
+#blog-nav-arrows-bottom-container {
+  display: block;
+  margin: 3rem auto 2rem;
+}
+
+.blog-nav-arrows .next-article-arrow,
+.blog-nav-arrows .prev-article-arrow {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 998px){
+  .blog-nav-arrows .next-article-arrow,
+  .blog-nav-arrows .prev-article-arrow {
+    font-size: 1.5rem;
+  } 
+}
+
+.blog-nav-arrows .next-article-arrow {
+  text-align: left;
+}
+
+.blog-nav-arrows .prev-article-arrow {
+  text-align: right;
+}
+
+.next-article-arrow a,
+.prev-article-arrow a {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #f2b51f;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: #4f4788 !important;
+  font-family: 'Nunito', san-serif;
+  font-weight: bold;
+}
+
+.next-article-arrow .icon-arrow-left svg {
+  transform: rotate(-180deg);
+}
+
+#back-to-blog {
+  display: inline-block;
+  width: auto;
+  background-color: #f2b51f;
+  padding: .5rem 2rem;
+  border-radius: 8px;
+  color: #4f4788;
+  font-family: 'Nunito', san-serif;
+  font-weight: bold;
+}
+
+#back-to-blog * {
+  display: inline-block;
+}
